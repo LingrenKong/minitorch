@@ -11,9 +11,20 @@ import math
 
 
 def mul(x, y):
-    ":math:`f(x, y) = x * y`"
+    """
+    multiplication
+
+    Args:
+        x (number): x
+        y (number): y
+
+    Returns:
+        x * y
+    """
+    return x * y
+    # ":math:`f(x, y) = x * y`"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError("Need to implement for Task 0.1")
+    # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def id(x):
