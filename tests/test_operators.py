@@ -142,7 +142,7 @@ def test_distribute(x, y, z):
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
-    assert_close(mul(z,add(x,y)),add(mul(z,x),mul(z,y)))
+    assert_close(mul(z, add(x, y)), add(mul(z, x), mul(z, y)))
     # TODO: Implement for Task 0.2.
     # raise NotImplementedError("Need to implement for Task 0.2")
 
