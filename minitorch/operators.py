@@ -31,21 +31,21 @@ def id(x):
     ":math:`f(x) = x`"
     return x
     # TODO: Implement for Task 0.1.
-    #raise NotImplementedError("Need to implement for Task 0.1")
+    # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def add(x, y):
     ":math:`f(x, y) = x + y`"
     return x + y
     # TODO: Implement for Task 0.1.
-    #raise NotImplementedError("Need to implement for Task 0.1")
+    # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def neg(x):
     ":math:`f(x) = -x`"
     return -x
     # TODO: Implement for Task 0.1.
-    #raise NotImplementedError("Need to implement for Task 0.1")
+    # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def lt(x, y):
@@ -55,7 +55,7 @@ def lt(x, y):
     else:
         return 0.0
     # TODO: Implement for Task 0.1.
-    #raise NotImplementedError("Need to implement for Task 0.1")
+    # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def eq(x, y):
@@ -75,7 +75,7 @@ def max(x, y):
     else:
         return y
     # TODO: Implement for Task 0.1.
-    #raise NotImplementedError("Need to implement for Task 0.1")
+    # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def is_close(x, y):
@@ -85,7 +85,7 @@ def is_close(x, y):
     else:
         return False
     # TODO: Implement for Task 0.1.
-    #raise NotImplementedError("Need to implement for Task 0.1")
+    # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def sigmoid(x):
@@ -106,10 +106,10 @@ def sigmoid(x):
     Returns:
         float : sigmoid value
     """
-    if x>=0:
-        return 1.0/(1.0+exp(neg(x)))
+    if x >= 0:
+        return 1.0 / (1.0 + exp(neg(x)))
     else:
-        return exp(x)/(1.0+exp(x))
+        return exp(x) / (1.0 + exp(x))
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
@@ -126,7 +126,7 @@ def relu(x):
     Returns:
         float : relu value
     """
-    return max(x,0)
+    return max(x, 0)
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
@@ -146,28 +146,28 @@ def exp(x):
 
 def log_back(x, d):
     r"If :math:`f = log` as above, compute :math:`d \times f'(x)`"
-    return mul(d,inv(x))
+    return mul(d, inv(x))
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def inv(x):
     ":math:`f(x) = 1/x`"
-    return 1/x
+    return 1 / x
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def inv_back(x, d):
     r"If :math:`f(x) = 1/x` compute :math:`d \times f'(x)`"
-    return -1/x**2
+    return -1 / x**2
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
 
 def relu_back(x, d):
     r"If :math:`f = relu` compute :math:`d \times f'(x)`"
-    return lt(0,x)
+    return lt(0, x)
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
