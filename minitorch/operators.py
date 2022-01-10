@@ -167,7 +167,7 @@ def inv_back(x, d):
 
 def relu_back(x, d):
     r"If :math:`f = relu` compute :math:`d \times f'(x)`"
-    return lt(0, x)
+    return d*lt(0, x)
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
