@@ -167,7 +167,7 @@ def inv_back(x, d):
 
 def relu_back(x, d):
     r"If :math:`f = relu` compute :math:`d \times f'(x)`"
-    return d*lt(0, x)
+    return d * lt(0, x)
     # TODO: Implement for Task 0.1.
     # raise NotImplementedError("Need to implement for Task 0.1")
 
@@ -193,14 +193,21 @@ def map(fn):
         function : A function that takes a list, applies `fn` to each element, and returns a
         new list
     """
+    def use(ls):
+        lnew = []
+        for l in ls:
+            lnew.append(fn(l))
+        return lnew
+    return use
     # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    # raise NotImplementedError("Need to implement for Task 0.3")
 
 
 def negList(ls):
     "Use :func:`map` and :func:`neg` to negate each element in `ls`"
+    return map(neg)(ls)
     # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    # raise NotImplementedError("Need to implement for Task 0.3")
 
 
 def zipWith(fn):
@@ -219,14 +226,21 @@ def zipWith(fn):
         applying fn(x, y) on each pair of elements.
 
     """
+    def use(ls1, ls2):
+        lnew = []
+        for x, y in zip(ls1, ls2):
+            lnew.append(fn(x, y))
+        return lnew
+    return use
     # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    # raise NotImplementedError("Need to implement for Task 0.3")
 
 
 def addLists(ls1, ls2):
     "Add the elements of `ls1` and `ls2` using :func:`zipWith` and :func:`add`"
+    return zip(add)(ls1,ls2)
     # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    # raise NotImplementedError("Need to implement for Task 0.3")
 
 
 def reduce(fn, start):
